@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css">
+  <title>Hello, world!</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: 0;
+      scroll-behavior: smooth;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+      font-weight: 500;
+    }
+
+    h2 {
+
+      margin: 20px 0 15px 0;
+      font-weight: 400;
+      line-height: 1.1;
+      font-size: 25px;
+    }
+
+    .header {
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 60, 255, 0.24), rgba(0, 60, 255, 0.24)), url('home.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 0 100%);
+
+    }
+
+    .header::before {
+      content: "";
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      background: linear-gradient(to right, #0000ffbb 0%, #ff00008f 0%, #ff33d36c 100%);
+      opacity: .4;
+      z-index: -1;
+
+    }
+
+    .navbar::before {
+      content: "";
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      background: linear-gradient(to right, #0400ffbb 0%, #8400fffa 0%, #8133ff 100%);
+      opacity: .4;
+      z-index: -1;
+    }
+
+    .nav-item a {
+      color: white !important;
+      font-weight: 600;
+    }
+
+    .header-section {
+      width: 100%;
+      height: inherit;
+      color: white;
+      position: relative;
+      text-align: center;
+
+    }
+
+    .center-div {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      -webkit-transform: translate(-50%, -50%);
+
+    }
+
+    .header-btn a {
+      border: 1px solid #fff;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 12px 35px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .header-btn a:hover {
+      color: black;
+      background: white;
+      box-shadow: 0 0 8px 2px gray;
+      font-weight: 400;
+    }
+
+    .center-div p {
+      font-size: 1.3rem;
+      padding: 5px 0 10px 0;
+    }
+
+    .header-extradiv {
+      width: 100%;
+      height: auto;
+      margin: 100px 0;
+      box-sizing: border-box;
+
+    }
+
+    .extra_div {
+      background: #fff;
+      border: medium none;
+      padding: 20px !important;
+      border-radius: 2px;
+      transition: 0.3s;
+
+
+    }
+
+    .extra_div i {
+      color: #8133ff;
+    }
+
+    .extra_div:hover {
+      box-shadow: 0 0 5px 2px rgb(207, 205, 205);
+      transform: translateY(-20px);
+    }
+
+    .offer {
+      background: whitesmoke;
+      padding: 50px 0;
+    }
+
+    .heading h1 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .servicesdiv h2 {
+      font-size: 0.9rem;
+      margin: 20px 0 15px 0;
+      font-weight: bold;
+      line-height: 1.1;
+      word-spacing: 4px;
+    }
+
+    .servicesdiv p {
+      font-size: 0.9rem;
+    }
+
+    .Services-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+    }
+
+    .servicesdiv i {
+      color: #8133ff;
+    }
+
+    .progress {
+      height: 0.8rem;
+      margin-bottom: 25px;
+    }
+
+    .progress-bar {
+      background: #8133ff;
+
+    }
+
+    .project {
+
+      margin: 100px 0;
+    }
+
+    .project h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    .pricing{
+      width: 100%;
+      height: 100vh;
+      padding: 50px;
+      position: relative;
+    }
+    .pricing::before {
+      content: "";
+      position: absolute;
+      left: 0%;
+      right: 0%;
+      top: 0%;
+      bottom: 0%;
+      background: linear-gradient(160deg, #8133ffee 55%, #fff 0%);
+     
+      z-index: -1;
+    }
+    .money{
+      font-size: 3rem;
+      line-height: 1;
+      color: #606060;
+    }
+    .card{
+      transition: 0.3s;
+    }
+    .card-header{
+      font-size: 1.6rem;
+      font-weight: bold;
+      background: #fff;
+      padding: 25px 0;
+    }
+    .card-body{
+      padding: 30px 0px;
+    }
+    .card-body li{
+      margin: 10px 0;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #606060;
+    }
+    .card-footer{
+      background: white;
+      padding: 30px 0;
+    }
+    .card-footer a{
+      color: #8133ff;
+    }
+    .card:hover{
+      transform:translateY(-20px);
+      box-shadow: 0 0 3px 2px rgb(165, 164, 164);
+    }
+    .contactdiv{
+      width: 100%;
+      height: 100vh;
+      padding: 80px 0;
+      position: relative;
+    }
+    .contactdiv::before{
+      content:" ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(330deg, #8133ffee 55%, #fff 0%);
+      z-index: -1;
+    }
+    .btn{
+    border: 1px solid #fff;
+      border-radius: 100px;
+      margin: 0 5px;
+      padding: 12px 35px;
+      color: white;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      background: transparent;
+   }
+   .btn:hover{
+     background: #fff!important;
+     color: black;
+   }
+   ::placeholder{
+     font-size: 0.9rem;
+     
+   }
+   .Newsletter{
+     width: 100%;
+     height: auto;
+     margin: 80px auto;
+   }
+   .Newsletter .form-control{
+     border-radius:100px 0px 0px 100px;
+    
+   }
+    ::placeholder{
+    padding: 0 0 0 10px;
+   }
+   .input-group-text{
+     background:#8133ffee;
+     color: #fff;
+     border-radius:0 100px 100px 100px;
+     height:41PX;
+     min-width: 140px;
+    
+   }
+   .footerdiv{
+     width: 100%;
+     height: auto;
+     padding: 70px 0 20px 0;
+     background:#8133ffee;
+    color: white;
+    font-size: 0.9rem;
+   }
+   .footerdiv li{
+    font-size: 0.9rem;
+    line-height: 1.6;
+    text-transform: capitalize;
+   }
+   .footerdiv h3{
+     font-size: 1.2rem;
+     margin-bottom: 25px;
+     font-weight: 600;
+   }
+
+   #myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #6200ffee; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 100px; /* Rounded corners */
+  font-size: 15px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
+/*********************media Queary**********************/
+@media(max-width:768px){
+  .nav-item{
+    text-align: center;
+  }
+  .pricing{
+    height: auto;
+    margin-top: 50px;
+  }
+  .card-second{
+    margin: 25px 0;
+  }
+  .contactdiv p{
+    padding: 20px 15px;
+  }
+  .footerdiv{
+   margin: 20px 0;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <section class="header" id="top-header">
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container text-uppercase p-2">
+        <a class="navbar-brand text-white font-weight-600" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="header-section">
+      <div class="center-div">
+        <h1 class="font-weight-bold">We are the Web Developer</h1>
+        <p>We create the World best Website</p>
+        <div class="header-btn">
+          <a href="#">AboutUs</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+
+    </section>
+
+  </section>
+
+  <!--------------------Headersection END--------------------->
+  <!--cards start-->
+  <div class="header-extradiv text-center card-deck">
+    <div class="container">
+      <div class="row">
+        <div class=" extra_div  col-lg-4 col-md-4 col-12">
+          <a href=""><i class=" fa-3x fas fa-desktop"></i></a>
+          <h2 class="text-uppercase">Easy To Use</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, explicabo? Id veniam ipsam ratione, enim
+            facilis, alias magni expedita accusantium qui rerum officia ducimus deleniti itaque repellendus.</p>
+        </div>
+
+        <div class=" extra_div  col-lg-4 col-md-4 col-12">
+          <a href=""><i class=" fa-3x fas fa-magic"></i></a>
+          <h2 class="text-uppercase">Easy To Customize</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, in aperiam perferendis vero consectetur
+            amet at animi qui incidunt quod beatae odio, quasi consequatur atque omnis perspiciatis magni dolore esse.
+          </p>
+        </div>
+
+        <div class=" extra_div col-lg-4 col-md-4 col-12">
+          <a href=""><i class="fa-3x fas fa-trophy"></i></a>
+          <h2 class="text-uppercase">Awesome Design</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, temporibus? Quasi deleniti pariatur,
+            dignissimos nemo, et molestias error iusto magnam non reprehenderit accusantium harum qui eos enim?</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!--------------------------------------offer section part------------------------------------->
+  <section class="offer">
+    <div class="container text-center heading">
+      <h1 class="font-weight-bold">WHAT DO WE OFFER</h1>
+      <P>Lorem ipsum dolor sit amet consectetur adipisicing elit.</P>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-10 offset-1 offset-lg-0">
+          <div class="name my-3">
+            HTML
+            <div class="progress">
+              <div class="progress-bar" style="width:70%">70%</div>
+            </div>
+          </div>
+
+          <div class="name my-3">
+            CSS
+            <div class="progress">
+              <div class="progress-bar" style="width:80%">80%</div>
+            </div>
+          </div>
+
+          <div class="name my-3">
+            JAVASCRIPT
+            <div class="progress">
+              <div class="progress-bar" style="width:60%">60%</div>
+            </div>
+          </div>
+
+          <div class="name my-3">
+            PHP
+            <div class="progress">
+              <div class="progress-bar" style="width:40%">40%</div>
+            </div>
+          </div>
+
+          <div class="name my-3">
+            MYSQL
+            <div class="progress">
+              <div class="progress-bar" style="width:50%">50%</div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-12 servicesdiv">
+          <div class="row">
+            <div class="col-lg-2 col-2 Services-icon">
+              <a href="#"><i class="fa-2x fas fa-desktop"></i></a>
+
+            </div>
+            <div class="col-lg-10 col-10">
+              <h2>Website Developer</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa velit dolorum animi
+                minima hic provident.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-2 col-2 Services-icon">
+              <a href="#"><i class="fa-2x fas fa-magic"></i></a>
+
+            </div>
+            <div class="col-lg-10 col-10">
+              <h2>Website Developer</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa velit dolorum animi
+                minima hic provident.</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-2 col-2 Services-icon">
+              <a href="#"><i class="fa-2x fas fa-wifi"></i></a>
+
+            </div>
+            <div class="col-lg-10 col-10">
+              <h2>Website Developer</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem ipsa velit dolorum animi
+                minima hic provident.</p>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!---------------------------------projectdone---------------------------------->
+  <section class="project">
+    <div class="container text-center heading">
+      <p class="font-weight-bold">MORE THAN 2,000 WEBSITES CREATED</p>
+
+    </div>
+    <div class="container d-flex justify-content-around  align-items-center text-center py-3">
+      <div>
+        <h1>1500</h1>
+        <p>CMS INSTALLTION</p>
+      </div>
+
+      <div>
+        <h1>2500</h1>
+        <p>CMS INSTALLTION</p>
+      </div>
+
+      <div>
+        <h1>1800</h1>
+        <p>CMS INSTALLTION</p>
+      </div>
+
+      <div>
+        <h1>1000</h1>
+        <p>CMS INSTALLTION</p>
+      </div>
+    </div>
+  </section>
+
+  <!--------------------------prices start----------------------->
+  <section class="pricing">
+    <div class="container text-center heading">
+      <h1 class="text-center font-weight-bold text-white py-4">OUR BEST PRICING</h1>
+
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4  col-12">
+          <div class="card text-center">
+            <div class="card-header">BASIC</div>
+            <div class="card-body">
+              <li>$ <span class="money">20</span>/website</li>
+              <li>Responsive Website</li>
+              <li>Mobile friendly</li>
+              <li>webmail Support</li>
+              <li>Custom Support</li>
+            </div>
+            <div class="card-footer">
+              <a href="#">Purchase</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4  col-12 card-second">
+          <div class="card text-center">
+            <div class="card-header">ULIMITED</div>
+            <div class="card-body">
+              <li>$ <span  class="money">20</span>/website</li>
+              <li>Responsive Website</li>
+              <li>Mobile friendly</li>
+              <li>webmail Support</li>
+              <li>Custom Support</li>
+            </div>
+            <div class="card-footer">
+              <a href="#">Purchase</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4  col-12">
+          <div class="card text-center">
+            <div class="card-header">STABORD</div>
+            <div class="card-body">
+              <li>$ <span  class="money">20</span>/website</li>
+              <li>Responsive Website</li>
+              <li>Mobile friendly</li>
+              <li>webmail Support</li>
+              <li>Custom Support</li>
+            </div>
+            <div class="card-footer">
+              <a href="#">Purchase</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!--------------------prices end----------------------->
+<!-------------------------contactus-------------------------------->
+<section class="contactdiv">
+  <div class="container text-center heading">
+    <h1 class="text-center font-weight-bold">CONTACT US</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> 
+  </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 offset-1">
+          <form action="/action_page.php">
+            <div class="form-group">
+              <input type="Name" class="form-control" id="Name" placeholder="Username"  required autocomplete="off">
+            </div>
+            <div class="form-group">
+              <input type="Username" class="form-control" id="username" placeholder="Email" required autocomplete="off">
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control" id="pwd" placeholder="Password"  required autocomplete="off">
+            </div>
+            <div class="form-group">
+             
+              <textarea class="form-control" rows="4" id="comment" placeholder="Comment"  required autocomplete="off"></textarea>
+            </div>
+           
+            <div class="d-flex justify-content-center from-btn">
+              
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<!----------------------------NewsLetter------------------------------->
+<section class="Newsletter">
+    <div class="container text-center heading">
+        <h1 class="text-center font-weight-bold text-uppercase py-5">subscribe to our NewsLetter</h1>
+      
+      </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-12 offset-lg-2">
+          <div class="input-group mb-3">
+              <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="input-group-text text-uppercase" id="basic-addon2">subscribe</bu>
+              </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-----------------------------------------Footer----------------------------------------------->
+
+<section class="footerdiv">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+        <div>
+          <h3>ABOUT WEB DEVELOPMENT</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ullam magnam eius perspiciatis, vel rem? Quam eum accusantium deserunt mollitia quae placeat accusamus. Quod facilis inventore suscipit repellendus sed deleniti!</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 col-12 footer-div">
+          <div class="text-center">
+            <h3>NAVIGATION LINK</h3>
+           <li>Home</li>
+           <li>Services</li>
+           <li>contact</li>
+           <li>Blog</li>
+           <li>About us</li>
+
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 col-12 footer-div ">
+            <div>
+              <h3>NEWSLETTER</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <div class="container">
+                  <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Your Email" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                              <button class="input-group-text text-uppercase" id="basic-addon2">subscribe</bu>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+      
+    </div>
+    <div class="mt-5 text-center">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="scrolltop float-right">
+        <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
+
+    </div>
+  </div>
+
+</section>
+
+<script>
+//Get the button:
+mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
